@@ -43,8 +43,8 @@ The `server.py` file implements the BitTorrent server. It serves file metadata a
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/AliDev-ir/BitTorrent-with-gRPC-protocol.git
+   cd BitTorrent-with-gRPC-protocol
    ```
 
 2. **Install Dependencies** (Assuming gRPC and necessary libraries are installed):
