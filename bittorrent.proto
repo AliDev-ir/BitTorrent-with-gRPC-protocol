@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package bittorrent;
+
+message FileChunk {
+  int32 index = 1;
+  bytes data = 2;
+}
+
+message FileMetadata {
+  string filename = 1;
+  int32 size = 2;
+}
+
+service BitTorrent {
+  rpc RequestFileMetadata(Empty) returns (FileMetadata);
+  rpc RequestFileChunk(FileChunkRequest) returns (FileChunk);
+  rpc UploadFileChunk(FileChunk) returns (Empty);
+}
+
+message Empty {}
+
+message FileChunkRequest {
+  int32 index = 1;
+}
